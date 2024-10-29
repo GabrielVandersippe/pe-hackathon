@@ -15,11 +15,15 @@ def trace_system(star : str):
     ax = fig.add_subplot(projection='3d')  # Affichage en 3D
     for planet,coord in D.items() :
         ax.plot(coord[:,0], coord[:,1], coord[:,2], label= planet)
-    plt.title("Système stellaire")
-    ax.set_xlabel('X')
-    ax.set_ylabel('Y')
-    ax.set_zlabel('Z')
+
+    plt.plot(0,0,0, color = "yellow", marker = "o") 
+
+    plt.title(f"Système {star}")
+    ax.set_xlabel('X [ua]')
+    ax.set_ylabel('Y [ua]')
+    ax.set_zlabel('Z [ua]')
     ax.legend()
+    ax.grid(False)
     plt.tight_layout()
     plt.subplot()
     plt.show()
