@@ -1,4 +1,4 @@
-#Code qui definit une fonction, qui, à partir d'une excentricité et d'un demi grand axe, renvoie une liste de points qui décrit l'orbite
+# Code qui definit une fonction, qui, à partir d'une excentricité et d'un demi grand axe, renvoie une liste de points qui décrit l'orbite
 
 import numpy as np
 
@@ -15,4 +15,10 @@ def orbite(e, a, N = 1000):
     Y[:N] = b*np.sqrt(1-np.square(X/a))
     Y[N:] = -b*np.sqrt(1-np.square(X/a))[1:-1]
 
-    return (X-c,Y)
+    Mat = np.zeros((2*N-2,3))
+
+    Mat[:N,0] = X-c
+    Mat[N:,0] = (X-c)[1:-1]
+    Mat[:,1] = Y
+
+    return Mat
