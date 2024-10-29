@@ -13,12 +13,12 @@ def orbite(e, a, N = 1000):
     Y = np.empty(2*N - 2)
 
     Y[:N] = b*np.sqrt(1-np.square(X/a))
-    Y[N:] = -b*np.sqrt(1-np.square(X/a))[1:-1]
+    Y[N:] = -b*np.sqrt(1-np.square(X/a))[-2:0:-1]
 
     Mat = np.zeros((2*N-2,3))
 
     Mat[:N,0] = X-c
-    Mat[N:,0] = (X-c)[1:-1]
+    Mat[N:,0] = (X-c)[-2:0:-1]
     Mat[:,1] = Y
 
     return Mat
