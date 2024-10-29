@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from Planets_to_orbits import planets_to_orbits
 from tri import get_planetsinfos
 
-# %matplotlib widget #### A METTRE SUR JUPYTER pour avoir une figure interactive.
+# %matplotlib widget
 # -
 
 def trace_system(star : str):
@@ -27,3 +27,8 @@ def trace_system(star : str):
     plt.tight_layout()
     plt.subplot()
     plt.show()
+
+
+trace_system("TOI-1136")
+
+
