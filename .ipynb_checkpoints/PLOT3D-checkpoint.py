@@ -9,10 +9,7 @@ r = z**2 + 1
 x = r * np.sin(theta)  # Création du tableau de l'axe x
 y = r * np.cos(theta)  # Création du tableau de l'axe y
 
-# +
 # Tracé du résultat en 3D
-# %matplotlib widget
-
 fig = plt.figure()
 ax = fig.add_subplot(projection='3d')  # Affichage en 3D
 ax.plot(x, y, z, label='Courbe')  # Tracé de la courbe 3D
@@ -24,6 +21,3 @@ ax.legend()
 plt.tight_layout()
 plt.subplot()
 plt.show()
-# -
-
-
