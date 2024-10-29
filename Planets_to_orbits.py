@@ -5,7 +5,7 @@ from Equation import orbite
 from tilt import tilt
 
 def planets_to_orbits(df, N = 1000):
-    L = df.index()
+    L = df.index
     D = {}
     for planet in L:
 
