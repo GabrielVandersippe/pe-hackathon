@@ -11,8 +11,8 @@ def planets_to_orbits(df, N = 1000):
 
         e = df.loc[planet,'Eccentricity']
         a = df.loc[planet,'Orbit Semi-Major Axis [au]']
-        alpha = df.loc[planet, 'Inclination [deg]']
-        beta = df.loc[planet, 'Argument of Periastron [deg]']
+        alpha = df.loc[planet, 'Inclination [deg]'] * np.pi/180
+        beta = df.loc[planet, 'Argument of Periastron [deg]'] * np.pi/180
 
         points = orbite(e, a, N)
         points = tilt(points, alpha,(0,1,0))
