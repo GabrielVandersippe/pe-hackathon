@@ -9,7 +9,7 @@ def trace_system(star : str):
     D = planets_to_orbits(df)
     fig = plt.figure()
     ax = fig.add_subplot(projection='3d')  # Affichage en 3D
-    for planet,coord in D.items :
+    for planet,coord in D.items() :
         ax.plot(coord[0], coord[1], coord[2], label= planet)
     plt.title("Système stellaire")
     ax.set_xlabel('X')
