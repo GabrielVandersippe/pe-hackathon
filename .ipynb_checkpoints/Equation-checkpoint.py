@@ -8,17 +8,17 @@ def orbite(e, a, N = 1000):
     c = np.sqrt(a**2 - b**2) #distance séparant le centre et l'un des foyers
 
 
-    X = np.linspace(-a,a,N)
+    X = np.arange(-a,a,2*a/N)
 
     Y = np.empty(2*N - 2)
 
     Y[:N] = b*np.sqrt(1-np.square(X/a))
-    Y[N:] = -b*np.sqrt(1-np.square(X/a))[-2:0:-1]
+    Y[N:] = -b*np.sqrt(1-np.square(X/a))[1:-1]
 
     Mat = np.zeros((2*N-2,3))
 
     Mat[:N,0] = X-c
-    Mat[N:,0] = (X-c)[-2:0:-1]
+    Mat[N:,0] = (X-c)[1:-1]
     Mat[:,1] = Y
 
     return Mat

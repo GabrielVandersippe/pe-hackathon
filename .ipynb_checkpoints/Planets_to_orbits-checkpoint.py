@@ -21,3 +21,14 @@ def planets_to_orbits(df, N = 1000):
         D[df.loc[planet, 'Planet Name']] = points
     
     return D
+
+
+# +
+from tri import get_planetsinfos
+
+planets_to_orbits(get_planetsinfos("nu Oph"))
+# -
+
+
+
+
