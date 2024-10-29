@@ -1,7 +1,7 @@
 import numpy as np
 
 
-def tilt(points, D = (0,1,0), alpha):
+def tilt(points, alpha, D = (0,1,0)):
     '''L'objectif est à partir d'un ensemble de points en 2D, de la donnée d'un axe D et d'un angle alpha, de renvoyer l'ensemble des points après une rotation d'angle alpha selon D.
     points : tableau numpy de points [x, y, z=0]
     alpha : float en radian

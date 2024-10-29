@@ -15,7 +15,9 @@ def planets_to_orbits(df, N = 1000):
         beta = df.loc[planet, 'Argument of Periastron [deg]']
 
         points = orbite(e, a, N)
-        points = tilt(points,(0,1,0), alpha)
-        points = tilt(points,(-np.sin(alpha),0,np.cos(alpha)),beta)
+        points = tilt(points, alpha,(0,1,0))
+        points = tilt(points, beta, (-np.sin(alpha),0,np.cos(alpha)))
 
         D[planet] = points
+    
+    return D
