@@ -12,6 +12,8 @@ Todo :
 - Représenter les ellipses dans un graphe 3D matplotlib, avec l'étoile au centre (Enzo)
 - Peut-être faire changer la couleur des points en fonction des raies spectrales ?
 
-```python
 
-```
+**Réalisation : programme qui prend un nom d'étoile et qui renvoie, si possible, la représentation spatiale du système stellaire correspondant**
+
+Il suffit d'appeler la fonction `trace_system`, du fichier `final` sur un nom d'étoile.
+Essayer avec `'nu Oph'`, `'WASP-47'`, `'TOI-700'`, `'TOI-270'` ou encore (et surtout) `'TOI-1136'` pour des résultats satisfaisants.
