@@ -18,6 +18,6 @@ def planets_to_orbits(df, N = 1000):
         points = tilt(points, alpha,(0,1,0))
         points = tilt(points, beta, (-np.sin(alpha),0,np.cos(alpha)))
 
-        D[planet] = points
+        D[df.loc[planet, 'Planet Name']] = points
     
     return D
